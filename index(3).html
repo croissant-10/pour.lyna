@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6f1835">
+<title>hmm ♡</title>
+<style>
+:root{--wine:#6f1835;--wine2:#8c2949;--rose:#f4cbd5;--pink:#fbe8ed;--cream:#fffaf7;--ink:#4b2632}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 10%,#f8dce4 0,transparent 32%),linear-gradient(145deg,#fff8f6,#f5dce3);color:var(--ink);font-family:Arial,Helvetica,sans-serif;display:grid;place-items:center;padding:22px;overflow-x:hidden}
+body:before,body:after{content:'♡';position:fixed;color:#b75a76;opacity:.13;font-size:190px;pointer-events:none;z-index:0}body:before{top:-65px;left:-35px;transform:rotate(-18deg)}body:after{bottom:-85px;right:-25px;transform:rotate(16deg)}
+.shell{width:min(100%,650px);position:relative;z-index:1}.top{display:flex;justify-content:center;margin-bottom:15px}.brand{font-family:Georgia,'Times New Roman',serif;color:var(--wine);font-size:20px;letter-spacing:5px}
+.card{position:relative;min-height:430px;padding:clamp(28px,7vw,55px);border:1px solid rgba(111,24,53,.13);border-radius:28px;background:rgba(255,250,247,.88);box-shadow:0 22px 65px rgba(92,24,48,.13);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;animation:appear .45s ease}
+.card:before{content:'';position:absolute;inset:10px;border:1px solid rgba(140,41,73,.13);border-radius:21px;pointer-events:none}
+@keyframes appear{from{opacity:.2;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#a45b71;margin-bottom:22px;font-weight:700}
+.message{font-size:clamp(18px,4vw,23px);line-height:1.8;max-width:520px;white-space:pre-line;position:relative;z-index:1}.first{font-size:clamp(19px,4.3vw,25px);font-weight:600;color:#69223b}
+.cat-scene{font-size:35px;letter-spacing:9px;margin:0 0 24px;filter:drop-shadow(0 4px 5px #e8b6c4)}
+.cat-scene span{display:inline-block;animation:float 3s ease-in-out infinite}.cat-scene span:nth-child(2){animation-delay:.4s}.cat-scene span:nth-child(3){animation-delay:.8s}@keyframes float{50%{transform:translateY(-7px) rotate(4deg)}}
+.btn{margin-top:32px;border:0;border-radius:999px;padding:14px 29px;background:var(--wine);color:white;font:600 15px Arial,Helvetica,sans-serif;letter-spacing:.3px;cursor:pointer;box-shadow:0 8px 20px #6f18353a;transition:.2s}.btn:hover{background:var(--wine2);transform:translateY(-2px);box-shadow:0 11px 24px #6f183544}.btn:active{transform:scale(.98)}
+.dots{display:flex;gap:7px;justify-content:center;margin-top:18px}.dot{width:6px;height:6px;border-radius:50%;background:#d9aab8}.dot.active{background:var(--wine);width:19px;border-radius:10px}
+.card.soft{background:linear-gradient(145deg,#fff9fa,#f9e4eb)}.card.deep{background:linear-gradient(145deg,#701a38,#4f142b);color:#fff2f5;border-color:#ffffff22}.card.deep:before{border-color:#ffffff25}.card.deep .eyebrow{color:#f3bdcc}.card.deep .message{color:#fff2f5}.card.deep .btn{background:#f4cbd5;color:#641832}.card.deep .btn:hover{background:#ffe0e7}
+.card.letter{align-items:stretch;text-align:left;min-height:500px}.letter .eyebrow{text-align:center}.letter .message{font-size:16px;line-height:1.9;max-width:none}.letter .btn{align-self:center}.sparkle{position:absolute;color:#c16b86;opacity:.35;font-size:20px}.s1{top:30px;right:34px}.s2{bottom:30px;left:35px}
+@media(max-width:480px){body{padding:14px}.card{min-height:410px;padding:34px 25px}.letter{padding:32px 25px}.letter .message{font-size:15px}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <section class="card" id="card" aria-live="polite">
+    <span class="sparkle s1">✧</span><span class="sparkle s2">♡</span>
+    <div class="eyebrow" id="eyebrow">juste quelques mots...</div>
+    <div class="message first" id="message">je sais bli ghltt meak lbar7 9lt bzf swal7 w nti brk knti t7wsi thdri meaya normal</div>
+    <button class="btn" id="next">kml hdra</button>
+  </section>
+  <div class="dots" id="dots" aria-label="Progression"><i class="dot active"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+</main>
+<script>
+const pages = [
+ {eyebrow:'juste quelques mots...',text:'je sais bli ghltt meak lbar7 9lt bzf swal7 w nti brk knti t7wsi thdri meaya normal',button:'kml hdra',theme:'',extra:''},
+ {eyebrow:'a tiny little surprise ♡',text:'lkn n9lk sorry mykonch endha m3na kbir aya 9lt ndir une autre méthode cette fois.. just pour toi💗',button:'encore...',theme:'soft',extra:'<div class="cat-scene"><span>🐱</span><span>🎀</span><span>♡</span></div>'},
+ {eyebrow:'something i want you to know',text:'tu es la personne la plus proche de moi w ndir fik confiance ktr mnhm g3...',button:'kml, mazal',theme:'deep',extra:'<div class="cat-scene"><span>✧</span><span>🤍</span><span>✧</span></div>'},
+ {eyebrow:'and one last thing...',text:'c just des fois nkon 3yan w machi 7aml ro7i aya n7b nry7 w7di brk bch nry7 w nwli norma😂l.. soo machi meantha mn7bch n7kilk wla mndirch fik confiance mais mea lw9t nwli n7kilk nchlh🫶🏻',button:'lmessage lik...',theme:'soft',extra:'<div class="cat-scene"><span>♡</span><span>🎀</span><span>♡</span></div>'},
+ {eyebrow:'for you, sincerely ♡',text:'w une autre fois ebli ghltt meak mm ida mtbynich mais elbli ghadk l7al e byna c ma faute w blk hada site ma endo 7ta m3na mais rni 7abk brk fthmi bli sa7 nti importante endi w zid yasmine jbt biha exemple brk ki tdl t7wsni nhdr w ana mnhdrch w nchlh ykon jaz elik l7al, w elbli endk la condition taek lym w nchlh yjozlk nhar chbb w ctt mkfanich lw9t bah ndirlk 7aja khir mais nchlh tfr7i chwiya ... w fla fin n9lk je t\'aime b lbn shby 🤙🏻💗😂',button:'fin ♡',theme:'letter',extra:''}
+];
+let page=0;const card=document.getElementById('card'), eyebrow=document.getElementById('eyebrow'), message=document.getElementById('message'), next=document.getElementById('next'), dots=[...document.querySelectorAll('.dot')];
+function render(){const p=pages[page];card.className='card '+p.theme;eyebrow.textContent=p.eyebrow;message.textContent=p.text;next.textContent=p.button;const old=card.querySelector('.cat-scene');if(old)old.remove();if(p.extra)message.insertAdjacentHTML('beforebegin',p.extra);dots.forEach((d,i)=>d.classList.toggle('active',i===page));card.style.animation='none';void card.offsetWidth;card.style.animation='appear .45s ease';}
+next.addEventListener('click',()=>{if(page<pages.length-1){page++;render()}else{next.textContent='💗';next.disabled=true;}});
+</script>
+</body>
+</html>
